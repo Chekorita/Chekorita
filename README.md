@@ -1,0 +1,5 @@
+- 👋 Hola, soy @Chekorita
+- 👀 Estoy interesado en programación de sistemas de gestión de datos, programación de juegos y sitios web.
+- 🌱 Actualmente aprendo sobre programar juegos en 2D
+- 💞️ Estoy buscando colaborar en proyectos de creación de videojuegos y sitios web
+- 📫 Soy nuevo, por lo que por el momento no puedo hacer cntacto o ser contactado.
