@@ -1,0 +1,274 @@
+* {
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+}
+
+.cont_corazon {
+    position: relative;
+    margin-top: 100px;
+}
+
+.cont_corazon > h1 {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+.cont_corazon > hr {
+    width: 300px;
+}
+
+#rect3810,
+#rect3802,
+#rect3826,
+#rect3806,
+#rect3820,
+#rect3818,
+#rect3822,
+#rect3824 {
+    z-index: -5;
+    position: relative;
+    animation-name: mov_1;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#rect3808,
+#rect3828,
+#rect3812,
+#rect3814 {
+    position: relative;
+    animation-name: mov_1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+#rect3804 {
+    z-index: -5;
+    position: relative;
+}
+
+@-webkit-keyframes mov_1 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(4px, -1px);
+        transform: translate(4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-5px, -1px);
+        transform: translate(-5px, -1px);
+        opacity: 0;
+    }
+}
+@-o-keyframes mov_1 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(4px, -1px);
+        transform: translate(4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-5px, -1px);
+        transform: translate(-5px, -1px);
+        opacity: 0;
+    }
+}
+@-moz-keyframes mov_1 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(4px, -1px);
+        transform: translate(4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-5px, -1px);
+        transform: translate(-5px, -1px);
+        opacity: 0;
+    }
+}
+@keyframes mov_1 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(4px, -1px);
+        transform: translate(4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-5px, -1px);
+        transform: translate(-5px, -1px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes mov_2 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(-4px, -1px);
+        transform: translate(-4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-8px, -1px);
+        transform: translate(-8px, -1px);
+    }
+}
+@-o-keyframes mov_2 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(-4px, -1px);
+        transform: translate(-4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-8px, -1px);
+        transform: translate(-8px, -1px);
+    }
+}
+@-moz-keyframes mov_2 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(-4px, -1px);
+        transform: translate(-4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-8px, -1px);
+        transform: translate(-8px, -1px);
+    }
+}
+@keyframes mov_2 {
+    from {
+        opacity: 1;
+        -webkit-transform: translate(-4px, -1px);
+        transform: translate(-4px, -1px);
+    }
+    to {
+        -webkit-transform: translate(-8px, -1px);
+        transform: translate(-8px, -1px);
+    }
+}
+
+svg {
+    position: relative;
+    animation-name: mov_heart;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes mov_heart {
+    0% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+}
+@-o-keyframes mov_heart {
+    0% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+}
+@-moz-keyframes mov_heart {
+    0% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+}
+@keyframes mov_heart {
+    0% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 10px);
+        transform: translate(0px, 10px);
+    }
+}
+
+.carousel-product {
+    width: 20%;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.swiper-container {
+    width: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 5%;
+}
+canvas {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Concert+One&family=Kanit:wght@300&family=Oswald:wght@300&family=Patrick+Hand+SC&family=Satisfy&display=swap');
+
+body {
+    font-family: 'Concert One', cursive;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip_letters {
+    position: relative;
+}
+
+.flip_letters span {
+    font-size: 10rem;
+    position: relative;
+    display: inline-block;
+    color: #c71111;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--flip));
+}
+
+@keyframes flip {
+    0%, 80% {
+        transform: rotateY(360deg); 
+    }
+}
