@@ -2,4 +2,4 @@
 - 👀 Estoy interesado en programación de sistemas de gestión de datos, programación de videojuegos 2D por el momento aunque deseo escalar a videojuegos 3D y sitios web ya sean estaticos o dinamicos.
 - 🌱 Actualmente aprendo sobre programar juegos en 2D
 - 💞️ Estoy buscando colaborar en proyectos de creación de videojuegos y sitios web
-- 📫 Soy nuevo, por lo que por el momento no puedo hacer contacto o ser contactado, de igual manera si el proyecto esta dirigido a principiantes puedo unirme sin problemas para adquirir experiencia.
+- 📫 Soy principiante respecto a grandes proyecto, así que sí el proyecto esta dirigido a principiantes puedo unirme sin problemas para adquirir experiencia pueden contactarme.
