@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Loved+by+the+King);
+body{
+    background-color: #F76FC5;
+}
 #center {
     position: absolute;
     top: 50%;
@@ -10,9 +13,6 @@ h1 {
     text-align: center; 
     font-size: 2em;
     color: white;
-}
-em {
-    color: #E72650;
 }
 #letter{
     background-color: #f2f2f2;
