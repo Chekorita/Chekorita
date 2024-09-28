@@ -1,5 +1,5 @@
-- 👋 Hola, soy @Chekorita
+- 👋 Hola, soy Sergio Bustamante De Jesús (@Chekorita)
 - 👀 Estoy interesado en programación de sistemas de gestión de datos, programación de videojuegos 2D por el momento aunque deseo escalar a videojuegos 3D y sitios web ya sean estaticos o dinamicos.
-- 🌱 Actualmente aprendo sobre programar juegos en 2D
-- 💞️ Estoy buscando colaborar en proyectos de creación de videojuegos y sitios web
-- 📫 Soy principiante respecto a grandes proyecto, así que sí el proyecto esta dirigido a principiantes puedo unirme sin problemas para adquirir experiencia pueden contactarme.
+- 🌱 Actualmente aprendo sobre programar juegos en 2D y frameworks para desarrollo de sistemas web dinamicos
+- 💞️ Estoy buscando colaborar en proyectos de creación de videojuegos y sitios web que se basen en la gestión de datos
+- 📫 Ten 2 años de experiencia en proyectos medianos y grandes con el objetivo de la gestión de datos.
