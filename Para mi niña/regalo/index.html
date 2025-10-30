@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz aniversario :3</title>
+    <style>
+        @media screen and (min-width: 1024px) {
+            /* Desktop styles */
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            button {
+                width: 200px;
+            }
+            img {
+                max-width: 300px;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            /* Tablet styles */
+            .container {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            button {
+                width: 150px;
+            }
+            img {
+                max-width: 250px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            /* Mobile styles */
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+            button {
+                width: 120px;
+            }
+            img {
+                max-width: 200px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f0;
+            color: #000000;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+        #siBoton {
+            background-color: #ff66b3;
+            color: white;
+        }
+        #noBoton {
+            background-color: #ff99cc;
+            color: #000000;
+        }
+        #mensaje {
+            color: green;
+            font-size: 20px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+        #mensajeGracias {
+            color: #000000;
+            margin-top: 10px;
+            display: none;
+        }
+        .sobre {
+            width: 200px;
+            height: 150px;
+            background: #f5f5f5;
+            margin: 20px auto;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .sobre:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 75px solid #e6e6e6;
+            transition: 0.3s;
+            transform-origin: top;
+            z-index: 3;
+        }
+        .carta {
+            position: absolute;
+            background: #d890c8;
+            width: 190px;
+            height: 500px;
+            top: 10px;
+            left: 10px;
+            transition: 0.3s;
+            z-index: 5;
+            padding: 20px;
+            visibility: hidden;
+        }
+        .sobre.open:before {
+            transform: rotateX(180deg);
+        }
+        .sobre.open .carta {
+            transform: translateY(-100px);
+            visibility: visible;
+        }
+        .corazon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff66b3;
+            transform: rotate(45deg);
+            animation: floatHeart 3s ease-in infinite;
+            opacity: 0;
+        }
+        .corazon:before, .corazon:after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #ff66b3;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .corazon:before {
+            left: -10px;
+        }
+        .corazon:after {
+            top: -10px;
+        }
+        @keyframes floatHeart {
+            0% { transform: rotate(45deg) translateY(0) scale(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: rotate(45deg) translateY(-100px) scale(1); opacity: 0; }
+        }
+    </style>
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensajeGracias').style.display = 'block';
+            document.getElementById('mensajeGracias').innerHTML = "";
+            document.getElementById('siOpcion').style.display = 'block';
+            document.getElementById('siOpcion').innerHTML = "";
+            document.getElementById('siBoton').style.display = 'none';
+            document.getElementById('siBoton').innerHTML = "";
+            document.getElementById('favorBoton').style.display = 'none';
+            document.getElementById('favorBoton').innerHTML = "";
+            document.getElementById('titulo').style.display = 'none';
+            document.getElementById('botones').style.display = 'none';
+
+            document.getElementById('titulo').style.display = 'block';
+            document.getElementById("titulo").innerHTML = "🥰 YEIII LO SABIA 🥰";
+            document.getElementById('mensaje').style.display = 'block';
+            document.getElementById('mensaje').innerHTML = "Abre esta cartita totalmente especial para ti &#10024;";
+            document.getElementById('regaloFinal').style.display = 'block';
+        }
+
+        let mensajes = [
+            "¿Estás segura?",
+            "¿Muy segura?",
+            "¿De verdad?",
+            "Por favor, solo una vez di que sí",
+            "Yo creo que debes tomar aire y volver a intentarlo",
+            "Piénsalo bien...",
+            "Creo que te equivocaste de botón",
+            "¿En serio?",
+            "La felicidad está en el botón de SI",
+            "¡Inténtalo de nuevo!",
+            "¿Ni un poquito?",
+            "¿Puedes intentar decir que sí solo por hoy?",
+            "¿Y si te ofrezco 5 cacahudolares?",
+            "¿Ni un poco como un granito de mostaza?",
+            "¿Muy segura?",
+            "¿Qué tal si lo intentamos una vez más?",
+            "¿De verdad no me amas?",
+            "¿No quieres probar apretar el SI?",
+            "Yo creo que deberias intentar con otro botón",
+            "Un osito cariñosito piensa que deberias presionar el otro",
+            "¿Y si decimos que fue por accidente al menos?",
+            "Andale andale andale, dale a que SI",
+            "El SI siempre es muy bonito ¿sabes?",
+            "Mi corazoncito quiere que pongas que SI",
+            "Vamos, un pequeño SI no hace daño",
+            "El botón de NO está defectuoso, mejor usa el SI",
+            "Última oportunidad para dar SI... por ahora",
+            "Bueno, por otra única ocasión, te daré otra oportunidad",
+        ];
+
+        let imagenes = [
+            "https://media1.tenor.com/m/KFiUJSB2ndcAAAAd/cute-cat-cat.gif",
+            "https://media.tenor.com/EnfUQlTnMF8AAAAj/disintegrating-meme-aughh-meme.gif",
+            "https://media1.tenor.com/m/HWp5q89UnRgAAAAd/kitten-kitty.gif",
+            "https://media.tenor.com/sWXhCC4A2woAAAAj/bubu-bubu-dudu.gif",
+            "https://media.tenor.com/d03TSs4VgTsAAAAj/sad-cat-cat.gif",
+            "https://media.tenor.com/FJtRi5UXT-gAAAAj/pusheen-pusheen-sad.gif",
+            "https://media1.tenor.com/m/NT0uKZ2QNqcAAAAd/kitten-sad-cat.gif",
+            "https://media1.tenor.com/m/ljRrEJeQF6QAAAAd/sad-cry.gif",
+            "https://media.tenor.com/Qu6GUg0Yx90AAAAj/mocha-cry.gif",
+            "https://media.tenor.com/0DKYMuOhOicAAAAj/cat-cat-sad.gif",
+            "https://media.tenor.com/F7AIHf8-ZUYAAAAj/bubu-yier.gif",
+            "https://media1.tenor.com/m/aV5v8D3_2HcAAAAd/smutny-kotek-smutny-kot.gif",
+            "https://media.tenor.com/LlxPGK7ACcgAAAAj/sad-cat.gif",
+            "https://media.tenor.com/mxFUB2neXSQAAAAj/rabbits.gif",
+            "https://media.tenor.com/f6fBzbbk1RcAAAAj/cat.gif",
+            "https://media.tenor.com/-2rbVbnfW24AAAAj/crying-cat-sad-kitty.gif",
+            "https://media.tenor.com/7uQ4GHysrS0AAAAj/tkthao219-bubududu.gif",
+            "https://media.tenor.com/VRrfwnKy6-cAAAAj/cat-cry.gif",
+            "https://media1.tenor.com/m/X_QaeEQDhRQAAAAd/hello-kitty.gif",
+            "https://media1.tenor.com/m/96-4gAFdtgYAAAAd/sad-cat-sad-cat-meme.gif",
+            "https://media.tenor.com/x1zd-DCiu3sAAAAj/dudu-cry-gif.gif",
+            "https://media1.tenor.com/m/FBO0s5pTKSwAAAAd/cat-pout.gif",
+            "https://media.tenor.com/rsB1gU-erYUAAAAj/cat-cats.gif",
+            "https://media1.tenor.com/m/sdwtJhSDETgAAAAd/sad-dog.gif",
+            "https://media1.tenor.com/m/QsRRHKx52XEAAAAd/el-gato-tristito.gif",
+            "https://media.tenor.com/qSkPKRrmpVoAAAAj/dog-violin.gif",
+            "https://media1.tenor.com/m/AZ__XiQ_RjsAAAAd/gato-gatinho.gif",
+            "https://media1.tenor.com/m/Vg9ZUFb2XxgAAAAd/perro.gif",
+        ];
+
+        let contadorClicks = 0;
+
+        function botonNo() {
+            const noBoton = document.getElementById('noBoton');
+            const mensaje = document.getElementById('mensaje');
+            const favorBoton = document.getElementById('favorBoton');
+
+            const newPositionX = Math.random() * 200 - 100;
+            const newPositionY = Math.random() * 200 - 100;
+            noBoton.style.transform = `translate(${newPositionX}px, ${newPositionY}px)`;
+
+            mensaje.style.display = 'block';
+            mensaje.innerHTML = mensajes[contadorClicks % mensajes.length];
+
+            favorBoton.innerHTML = `<img src="${imagenes[contadorClicks % imagenes.length]}" width="200">`;
+            const siBoton = document.getElementById('siBoton');
+            const currentWidth = siBoton.offsetWidth;
+            const currentHeight = siBoton.offsetHeight;
+            const newWidth = Math.min(currentWidth * 1.05, currentWidth * 1.25);
+            const newHeight = Math.min(currentHeight * 1.05, currentHeight * 1.25);
+            siBoton.style.width = newWidth + 'px';
+            siBoton.style.height = newHeight + 'px';
+            contadorClicks++;
+        }
+
+        function abrirCarta(sobre) {
+            document.getElementById('mensaje').style.display = 'none';
+            sobre.classList.add('open');
+            crearCorazones();
+        }
+
+        function crearCorazones() {
+            for(let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const corazon = document.createElement('div');
+                    corazon.className = 'corazon';
+                    corazon.style.left = Math.random() * 100 + '%';
+                    document.getElementById('regaloFinal').appendChild(corazon);
+                    setTimeout(() => corazon.remove(), 30000);
+                }, i * 300);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="titulo" style="width: auto;">¿ME AMAS?</h1>
+    <div id="botones" style="width: auto;">
+        <button id="siBoton" onclick="mostrarMensaje()">Sí</button>
+        <button id="noBoton" onclick="botonNo()">No</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="mensaje" style="width: auto;">
+    </div>
+    <div id="mensajeGracias" style="width: auto;">
+    </div>
+    <div id="favorBoton" style="width: auto;">
+    </div>
+    <div id="siOpcion" style="width: auto;">
+    </div>
+    <div id="regaloFinal" style="display: none;">
+        <div class="sobre" onclick="abrirCarta(this)">
+            <div class="carta">
+                <img src="https://media.tenor.com/tzsZLag0UhQAAAAi/bubu-dudu-sseeyall.gif" style="width:100px;">
+                <p><b>Te amo con todo mi corazón ❤️</b></p>
+                <p>Eres muy especial para mi, me alegra poder estar contigo, no sé que nos depare el futuro, pero creeme que muchas gracias por estar conmigo, yo quiero estar contigo, quiero ser parte de tu vida</p>
+                <p><b>❤️ Feliz aniversario mi bebé ❤️</b></p>
+                <img src="https://media.tenor.com/PfRW1cmW1PQAAAAi/dudu-hearts-gif.gif" style="width:100px;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
